@@ -10,6 +10,10 @@ class PokedexBase(BaseModel):
     types: List[dict]
 
 
+class PokedexAll(BaseModel):
+    name: str
+    url: str
+
 
 class PokedexCreate(PokedexBase):
     pass
