@@ -4,8 +4,8 @@ from typing import List, Optional
 
 class PokedexBase(BaseModel):
     name: str
-    abilities: List[dict]
     id: int
+    abilities: List[dict]
     sprites: dict
     types: List[dict]
 
@@ -15,12 +15,9 @@ class PokedexAll(BaseModel):
     url: str
 
 
-class PokedexCreate(PokedexBase):
-    pass
-
-
-class PokedexUpdate(PokedexBase):
-    pass
+class PokedexUpdate(BaseModel):
+    name: Optional[str] = None
+    id: Optional[int] = None
 
 
 class PokedexOut(PokedexBase):
