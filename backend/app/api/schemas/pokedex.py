@@ -18,10 +18,3 @@ class PokedexAll(BaseModel):
 class PokedexUpdate(BaseModel):
     name: Optional[str] = None
     id: Optional[int] = None
-
-
-class PokedexOut(PokedexBase):
-    id: int
-
-    class Config:
-        orm_mode = True
