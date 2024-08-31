@@ -36,9 +36,7 @@ def test_get_pokemons_success():
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
-    assert (
-        len(data) <= 10
-    )
+    assert len(data) <= 10
 
 
 def test_get_pokemons_pagination():
@@ -46,6 +44,4 @@ def test_get_pokemons_pagination():
     assert response.status_code == 200
     data = response.json()
     assert isinstance(data, list)
-    assert (
-        len(data) <= 5
-    )
+    assert len(data) <= 5
